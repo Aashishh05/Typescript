@@ -1,4 +1,5 @@
 import "./App.css";
+import { Card } from "./components/Card.tsx";
 import { ChaiCard } from "./components/ChaiCard.tsx";
 import { ChaiList } from "./components/ChaiList.tsx";
 import { Counter } from "./components/Counter.tsx";
@@ -26,7 +27,15 @@ function App() {
       </div>
 
       <div>
-        <OrderForm onSubmit={(order) => console.log("placed",order.name,order.cups)} />
+        <OrderForm
+          onSubmit={(order) => console.log("placed", order.name, order.cups)}
+        />
+      </div>
+
+      <div>
+        <Card title="Chai Code" footer={<button>Order Now</button>} />
+        {/* button means react node 
+        means html elements means react node */}
       </div>
     </>
   );
